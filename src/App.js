@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './App.css';
 import Collaboration from './Components/Pages/Collaboration/Collaboration';
 import Competition from './Components/Pages/Competition/Competition';
 import Discussion from './Components/Pages/Discussion/Discussion';

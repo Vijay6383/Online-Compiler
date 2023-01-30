@@ -1,6 +1,5 @@
 import React from 'react';
 import { BsFillCaretLeftFill } from "react-icons/bs";
-import { FaChevronCircleDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const Discussion = () => {
