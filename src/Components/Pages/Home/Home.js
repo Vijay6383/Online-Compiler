@@ -95,7 +95,7 @@ const Home = () => {
                 <h2 className='text-3xl font-semibold text-gray-700 uppercase text-center pt-4 text-white container1'>Sponsors</h2>
                 <div className='flex flex-col lg:flex-row justify-around items-center gap-10 p-6 m-6 justify-center items-center content-center container2'>
                     <div className="w-9/12 h-auto border-1 py-12 shadow-l hover:shadow-2xl rounded-md bg-white cursor-pointer card">
-                        {/* <img class="w-6 h-6 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="https://thumbs.dreamstime.com/b/sponsor-grunge-retro-red-ribbon-stamp-isolated-86162819.jpg" alt="" width="100" height="100" /> */}
+                        {/* <img class="w-6 h-6 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="https://thumbs.dreamstime.com/b/sponsor-grunge-retro-red-ribbon-stamp-isolated-86162819.jpg" alt="" width="100" height="100" /> */}           
                     </div>
                     <div className="w-9/12 h-auto border-1 shadow-l hover:shadow-2xl py-12 bg-white rounded-md cursor-pointer card">
                         {/* <img class="w-12 h-6 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="https://thumbs.dreamstime.com/b/sponsor-grunge-retro-red-ribbon-stamp-isolated-86162819.jpg" alt="" width="384" height="512" /> */}
@@ -104,7 +104,7 @@ const Home = () => {
                         {/* <img class="w-12 h-6 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="https://thumbs.dreamstime.com/b/sponsor-grunge-retro-red-ribbon-stamp-isolated-86162819.jpg" alt="" width="384" height="512" /> */}
                     </div>
                 </div>
-                <div className='flex flex-col lg:flex-row justify-center items-center gap-10 p-6 m-6 justify-center items-center content-center container2'>
+                <div className='flex items-start flex-col lg:flex-row justify-center gap-10 p-6 m-6 justify-center items-center content-center container2'>
                     <div className="w-9/12 lg:w-96 border-1 shadow-l hover:shadow-2xl py-12 bg-white rounded-md cursor-pointer card">
                         {/* <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="https://thumbs.dreamstime.com/b/sponsor-grunge-retro-red-ribbon-stamp-isolated-86162819.jpg" alt="" width="384" height="512" /> */}
                     </div>
