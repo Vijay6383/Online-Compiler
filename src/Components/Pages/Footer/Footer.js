@@ -8,14 +8,14 @@ const Footer = () => {
        <footer className="footer footer-center p-10 bg-orange-400 text-white rounded font-bold">
             <div className='flex flex-col gap-5'>
                 <div className="flex flex-col lg:flex-row gap-5">
-                    <Link className="link link-hover">Blog</Link>
-                    <Link className="link link-hover">About us</Link>
-                    <Link className="link link-hover">Contact</Link>
-                    <Link className="link link-hover">Privacy Policy</Link>
+                    <Link  to='/competition' className="link link-hover">Blog</Link>
+                    <Link  to='/profile' className="link link-hover">About us</Link>
+                    <Link  to='/collaboration' className="link link-hover">Contact</Link>
+                    <Link  to='/problems' className="link link-hover">Privacy Policy</Link>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-5">
-                    <Link className="link link-hover">Community</Link>
-                    <Link className="link link-hover">Faq</Link>
+                    <Link  to='/discussion' className="link link-hover">Community</Link>
+                    <Link  to='/ide' className="link link-hover">Faq</Link>
                     <Link className="link link-hover">Terms</Link>
                 </div>
             </div>
@@ -43,7 +43,7 @@ const Footer = () => {
                 <div className="divider lg:divider-horizontal border-l-4"></div>
                 <div className='flex items-center justify-center'>
                     <HiOutlineMail></HiOutlineMail>
-                    <p className='pl-2'>kunal.q.sharma@quencil.in</p>
+                    <a href=""><p className='pl-2'>kunal.q.sharma@quencil.in</p></a>
                 </div>
             </div>
         </footer>

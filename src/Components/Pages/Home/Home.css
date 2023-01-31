@@ -29,3 +29,25 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
+
+/* event section */
+
+
+/* the slides */
+
+.section-gap {
+  margin: 0 10px;
+}
+
+.slick-slider {
+  margin: 0 -15px;
+}
+
+
+.slick-slide {
+  padding: 10px;
+
+  margin-right: 15px;
+  margin-left: 15px;
+}

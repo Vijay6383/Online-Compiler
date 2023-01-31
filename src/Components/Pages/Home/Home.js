@@ -7,26 +7,28 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
+// import './Home.css';
+
 const Home = () => {
   var settings = {
     dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -74,7 +76,7 @@ const Home = () => {
       {/* start */}
       <div className="border-2 p-6 mx-6 mb-6">
         <Slider {...settings}>
-          <div className="p-6 m-2 border-2  text-gray-600">
+          <div className="p-6 m-2 border-2  text-gray-600 ">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
               Event <br /> Name
             </h2>
@@ -83,7 +85,7 @@ const Home = () => {
               Read More
             </p>
           </div>
-          <div className="p-6  m-2 border-2 text-gray-600">
+          <div className="p-6  m-2 border-2 text-gray-600 ">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
               Event <br /> Name
             </h2>
@@ -159,63 +161,184 @@ const Home = () => {
       </div>
       {/* end */}
 
-      <div className="border-2 p-6 mx-6 mb-6">
+      <div className="border-2 p-6 mx-6 mb-6 relative" >
         <h2 className="text-3xl font-semibold text-gray-700 uppercase">
           Recent Winners
         </h2>
-        <div className="flex flex-col lg:flex-row justify-around items-center gap-4 border-x border-b-2 p-6 m-6">
-          <div className="w-full border-2">
+       
+          <Slider {...settings}>
+
+
+          <div className=" w-full border-2">
             <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
+            <div>
+            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+            Name
+            </h2>
+            <p className="font-semibold pt-2 lg:text-base text-sm">
+            description
+            </p>
+            </div>
+            <div className="avatar">
+            <div className="w-24 rounded-full">
+            <img src="https://placeimg.com/192/192/people" alt="" />
+            </div>
+              </div>
+              </div>
+              </div>
+
+
+              <div className=" w-full border-2">
+            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
+            <div>
+            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+            Name
+            </h2>
+            <p className="font-semibold pt-2 lg:text-base text-sm">
+            description
+            </p>
+            </div>
+            <div className="avatar">
+            <div className="w-24 rounded-full">
+            <img src="https://placeimg.com/192/192/people" alt="" />
+            </div>
+              </div>
+              </div>
+              </div>
+
+
+              <div className=" w-full border-2">
+            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
+            <div>
+            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+            Name
+            </h2>
+            <p className="font-semibold pt-2 lg:text-base text-sm">
+            description
+            </p>
+            </div>
+            <div className="avatar">
+            <div className="w-24 rounded-full">
+            <img src="https://placeimg.com/192/192/people" alt="" />
+            </div>
+              </div>
+              </div>
+              </div>
+          
+              <div className=" w-full border-2">
+            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
+            <div>
+            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+            Name
+            </h2>
+            <p className="font-semibold pt-2 lg:text-base text-sm">
+            description
+            </p>
+            </div>
+            <div className="avatar">
+            <div className="w-24 rounded-full">
+            <img src="https://placeimg.com/192/192/people" alt="" />
+            </div>
+              </div>
+              </div>
+              </div>
+          
+              <div className=" w-full border-2">
+            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
+            <div>
+            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+            Name
+            </h2>
+            <p className="font-semibold pt-2 lg:text-base text-sm">
+            description
+            </p>
+            </div>
+            <div className="avatar">
+            <div className="w-24 rounded-full">
+            <img src="https://placeimg.com/192/192/people" alt="" />
+            </div>
+              </div>
+              </div>
+              </div>
+          
+              <div className=" w-full border-2">
+            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
+            <div>
+            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+            Name
+            </h2>
+            <p className="font-semibold pt-2 lg:text-base text-sm">
+            description
+            </p>
+            </div>
+            <div className="avatar">
+            <div className="w-24 rounded-full">
+            <img src="https://placeimg.com/192/192/people" alt="" />
+            </div>
+              </div>
+              </div>
+              </div>
+          
+          {/* <div className="w-full border-2">
+            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
+            <div>
+            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+            Name
+            </h2>
+            <p className="font-semibold pt-2 lg:text-base text-sm">
+            description
+            </p>
+            </div>
+            <div className="avatar">
+            <div className="w-24 rounded-full">
+            <img src="https://placeimg.com/192/192/people" alt="" />
+            </div>
+              </div>
+              </div>
+              </div>
+              <div className="w-full border-2">
+              <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
               <div>
                 <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
                   Name
-                </h2>
+                  </h2>
                 <p className="font-semibold pt-2 lg:text-base text-sm">
                   description
                 </p>
-              </div>
-              <div className="avatar">
+                </div>
+                <div className="avatar">
                 <div className="w-24 rounded-full">
                   <img src="https://placeimg.com/192/192/people" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-full border-2">
-            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
-              <div>
-                <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  <div className="w-full border-2">
+                  <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
+                  <div>
+                  <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
                   Name
-                </h2>
-                <p className="font-semibold pt-2 lg:text-base text-sm">
+                  </h2>
+                  <p className="font-semibold pt-2 lg:text-base text-sm">
                   description
-                </p>
-              </div>
+                  </p>
+                  </div>
               <div className="avatar">
-                <div className="w-24 rounded-full">
-                  <img src="https://placeimg.com/192/192/people" alt="" />
+              <div className="w-24 rounded-full">
+              <img src="https://placeimg.com/192/192/people" alt="" />
                 </div>
               </div>
             </div>
-          </div>
-          <div className="w-full border-2">
-            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
-              <div>
-                <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
-                  Name
-                </h2>
-                <p className="font-semibold pt-2 lg:text-base text-sm">
-                  description
-                </p>
-              </div>
-              <div className="avatar">
-                <div className="w-24 rounded-full">
-                  <img src="https://placeimg.com/192/192/people" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          </div> */}
+          </Slider>
+          <div className=" absolute flex justify-between transform -translate-y-1/2 left-5 right-5  top-1/2 ">
+        <a href={`#slide`} className=" -ml-3">
+          ❮
+        </a>
+        <a href={`#slide`} className="-mr-3">
+          ❯
+        </a>
+      </div>
       </div>
       <div className="border-2 p-6 mx-6 mb-6">
         <h2 className="text-3xl font-semibold text-gray-700 uppercase">
