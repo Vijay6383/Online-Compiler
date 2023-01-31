@@ -73,6 +73,9 @@ const Home = () => {
       
       {/* start */}
       <div className="border-2 p-6 mx-6 mb-6">
+      <h2 className="text-3xl font-semibold text-gray-700 uppercase">
+          Crystal Events
+        </h2>
         <Slider {...settings}>
           <div className="p-6 m-2 border-2  text-gray-600">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
