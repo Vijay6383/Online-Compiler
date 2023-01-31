@@ -5,7 +5,7 @@ import { HiOutlineMail } from "react-icons/hi"
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 bg-orange-400 text-white rounded font-bold">
+       <footer className="footer footer-center p-10 bg-orange-400 text-white rounded font-bold">
             <div className='flex flex-col gap-5'>
                 <div className="flex flex-col lg:flex-row gap-5">
                     <Link className="link link-hover">Blog</Link>
@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             <div className='flex flex-col lg:flex-row'>
                 <div>
-                    <p className='mb-5'>Contact with us</p>
+                    <p className='mb-5 text-2xl uppercase'>Contact with us</p>
                     <div className="grid grid-flow-col gap-4">
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className='hover:text-orange-600'>
                             <FaFacebook></FaFacebook>
@@ -40,7 +40,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div className="divider lg:divider-horizontal"></div>
+                <div className="divider lg:divider-horizontal border-l-4"></div>
                 <div className='flex items-center justify-center'>
                     <HiOutlineMail></HiOutlineMail>
                     <p className='pl-2'>kunal.q.sharma@quencil.in</p>
