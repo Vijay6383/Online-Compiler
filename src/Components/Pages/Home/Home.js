@@ -47,8 +47,8 @@ const Home = () => {
       <div className="relative min-h-screen">
         <img src={topImg} alt="" className="absolute right-0 hidden lg:flex" />
         <div className="flex flex-col lg:flex-row-reverse justify-between items-stretch text-gray-700 lg:mx-40 lg:mt-0 mt-12">
-          <img src={hero} className="lg:w-2/4 rounded-lg lg:pt-24" alt="" />
-          <div className="p-6 lg:pt-12">
+          <img src={hero} className="lg:w-1/3 rounded-lg lg:pt-24" alt="" />
+          <div className="text-center p-6 lg:pt-12">
             <h1 className="lg:text-3xl font-bold text-xl">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </h1>
