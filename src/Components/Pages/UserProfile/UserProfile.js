@@ -84,20 +84,20 @@ const UserProfile = () => {
 
             {/* Badges start here */}
             <div className="border-2 px-6 m-6 text-gray-400">
-                <p className='text-sm'>Badges</p>
-                <div className='flex justify-around items-center'>
-                    <>
-                        <img src="" alt="" />
+                <p className='text-lg uppercase'>Badges</p>
+                <div className='flex justify-around items-center text-center'>
+                    <div>
+                        <img className='bg-gray-500 p-24 my-2' src="" alt="" />
                         <p>Title</p>
-                    </>
-                    <>
-                        <img src="" alt="" />
+                    </div>
+                    <div>
+                    <img className='bg-gray-500 p-24 my-2' src="" alt="" />
                         <p>Title</p>
-                    </>
-                    <>
-                        <img src="" alt="" />
+                    </div>
+                    <div>
+                    <img className='bg-gray-500 p-24 my-2' src="" alt="" />
                         <p>Title</p>
-                    </>
+                    </div>
                 </div>
             </div>
             {/* Badges ends here */}
@@ -122,13 +122,13 @@ const UserProfile = () => {
 
             {/* Certificates start here */}
             <div className="border-2 px-6 m-6 font-medium text-gray-400">
-                <p className='text-sm'>Certificates</p>
+                <p className='text-lg uppercase'>Certificates</p>
                 <div className='flex justify-center items-center gap-5 p-6'>
-                    <div className="border-2 w-64 h-32">
-
+                    <div className="border-2 w-full h-40">
+                        <div className='border-2 w-64 h-32 my-4 ml-4'></div>
                     </div>
-                    <div className="border-2 w-64 h-32">
-
+                    <div className="border-2 w-full h-40">
+                    <div className='border-2 w-64 h-32 my-4 ml-4'></div>
                     </div>
                 </div>
             </div>
