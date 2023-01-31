@@ -37,13 +37,30 @@
 /* the slides */
 
 
+/* .slick-slider {
+  margin: 0 -15px;
+} */
+
+.slick-slide {
+  width: 290px;
+  height: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 
 .slick-arrow.slick-prev {
-  background: rgba(20, 15, 15, 0.466);
-  border-radius: 50%;
+  /* background: rgba(20, 15, 15, 0.466); */
+  border-radius: 5rem;
+  width: 28px;
+  height: 28px;
 }
 
 .slick-arrow.slick-next {
-  background: rgba(20, 15, 15, 0.466);
-  border-radius: 50%;
+  /* background: rgba(20, 15, 15, 0.466); */
+  border-radius: 5rem;
+  width: 28px;
+  height: 28px;
 }
+
+.winning-section {}
