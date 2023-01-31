@@ -36,18 +36,14 @@
 
 /* the slides */
 
-.section-gap {
-  margin: 0 10px;
+
+
+.slick-arrow.slick-prev {
+  background: rgba(20, 15, 15, 0.466);
+  border-radius: 50%;
 }
 
-.slick-slider {
-  margin: 0 -15px;
-}
-
-
-.slick-slide {
-  padding: 10px;
-
-  margin-right: 15px;
-  margin-left: 15px;
+.slick-arrow.slick-next {
+  background: rgba(20, 15, 15, 0.466);
+  border-radius: 50%;
 }
