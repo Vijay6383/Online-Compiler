@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .prev,
 .next {
   cursor: pointer;
@@ -46,4 +47,16 @@
 .slick-arrow.slick-next {
   background: rgba(20, 15, 15, 0.466);
   border-radius: 50%;
+=======
+@media screen and (max-width: 1024px) {
+    .container1.container2 {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container1.container2 {
+        width: 50%;
+    }
+>>>>>>> 9f1c88a4c5035dd33f4c48d1de30aa8017a702f2
 }
