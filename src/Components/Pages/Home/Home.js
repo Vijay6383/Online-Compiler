@@ -71,6 +71,7 @@ const Home = () => {
         />
       </div>
       
+      {/* start */}
       <div className="border-2 p-6 mx-6 mb-6">
         <Slider {...settings}>
           <div className="p-6 m-2 border-2  text-gray-600">
@@ -82,7 +83,6 @@ const Home = () => {
               Read More
             </p>
           </div>
-
           <div className="p-6  m-2 border-2 text-gray-600">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
               Event <br /> Name
@@ -92,8 +92,7 @@ const Home = () => {
               Read More
             </p>
           </div>
-
-          <div className="p-6 m-2 border-2 m-2 text-gray-600">
+          <div className="p-6 m-2 border-2 text-gray-600">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
               Event <br /> Name
             </h2>
@@ -102,17 +101,6 @@ const Home = () => {
               Read More
             </p>
           </div>
-
-          <div className="p-6 border-2 m-2 text-gray-600">
-            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
-              Event <br /> Name
-            </h2>
-            <p className="font-semibold lg:text-base text-sm">description</p>
-            <p className="text-xs border-b-2 pt-10 font-semibold lg:w-24">
-              Read More
-            </p>
-          </div>
-
           <div className="p-6 border-2 m-2 text-gray-600">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
               Event <br /> Name
@@ -140,7 +128,6 @@ const Home = () => {
               Read More
             </p>
           </div>
-
           <div className="p-6 border-2 m-2 text-gray-600">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
               Event <br /> Name
@@ -150,7 +137,6 @@ const Home = () => {
               Read More
             </p>
           </div>
-
           <div className="p-6 border-2 m-2 text-gray-600">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
               Event <br /> Name
@@ -160,10 +146,19 @@ const Home = () => {
               Read More
             </p>
           </div>
-
+          <div className="p-6 border-2 m-2 text-gray-600">
+            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
+              Event <br /> Name
+            </h2>
+            <p className="font-semibold lg:text-base text-sm">description</p>
+            <p className="text-xs border-b-2 pt-10 font-semibold lg:w-24">
+              Read More
+            </p>
+          </div>
         </Slider>
       </div>
       {/* end */}
+
       <div className="border-2 p-6 mx-6 mb-6">
         <h2 className="text-3xl font-semibold text-gray-700 uppercase">
           Recent Winners
