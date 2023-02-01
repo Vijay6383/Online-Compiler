@@ -43,11 +43,6 @@ const Problem = () => {
 
 	React.useEffect(() => {
 		updateListDOM();
-		// console.log("ProblemSet: " + ProblemSet);
-		console.log("Filter: ");
-		console.log(Filter);
-		console.log("ProblemSet: ");
-		console.log(ProblemSet);
 	}, [Filter]);
 
 	const onOptionChangeHandler = (event) => {
