@@ -3,6 +3,7 @@ import hero from '../../../assets/Hero.png'
 import footerImg from '../../../assets/footer.png'
 import topImg from '../../../assets/top.png'
 import { Link } from 'react-router-dom';
+import '../Home/Home.css';
 
 const Home = () => {
     return (
@@ -90,16 +91,17 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='border-2 p-6 mx-6 mb-6'>
-                <h2 className='text-3xl font-semibold text-gray-700 uppercase'>Sponsors</h2>
-                <div className='flex flex-col lg:flex-row justify-around items-center gap-12 p-6 m-6'>
-                    <div className="w-full border-2 py-12"></div>
-                    <div className="w-full border-2 py-12"></div>
-                    <div className="w-full border-2 py-12"></div>
+            <div className='p-6'>
+            <div className='absolute w-[1375px] shadow-xl drop-shadow-xl h-[230px] rectangle-box'></div>
+                <h2 className='text pl-20 pt-10'>Sponsors</h2>
+                <div className='flex flex-col lg:flex-row justify-around items-center content-center container2'>
+                    <div className="cursor-pointer card1"></div>
+                    <div className="cursor-pointer card1"></div>
+                    <div className="cursor-pointer card1"></div>
                 </div>
-                <div className='flex flex-col lg:flex-row justify-center items-center gap-12 p-6 m-6'>
-                    <div className="w-full lg:w-96 border-2 py-12"></div>
-                    <div className="w-full lg:w-96 border-2 py-12"></div>
+                <div className='flex items-start flex-col lg:flex-row justify-center p-16 items-center content-center container3'>
+                    <div className="cursor-pointer card2"></div>
+                    <div className="cursor-pointer card2"></div>
                 </div>
             </div>
             <div className='border-2 p-6 mx-6 mb-6'>
