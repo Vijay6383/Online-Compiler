@@ -1,0 +1,28 @@
+.right-floating-bar {
+    position: absolute;
+    top: 30px;
+    right: 12px;
+    width: 190px;
+    height: 120px;
+    background-color: rgb(208, 212, 212);
+    z-index: 1;
+}
+
+.right-floating-bar > #triangle{
+    position: absolute;
+    top: -9px;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 0 20px 30px;
+    border-color: transparent transparent rgb(208, 212, 212) transparent;
+    transform: rotate(0deg);
+}
+
+.right-floating-bar > .theme-option{
+    position: absolute;
+    padding-top: 1rem;
+}
+
+

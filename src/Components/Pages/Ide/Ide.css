@@ -1,0 +1,6 @@
+#ide-options-top {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    position: relative;
+}
