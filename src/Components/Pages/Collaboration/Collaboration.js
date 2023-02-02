@@ -19,7 +19,7 @@ const Collaboration = () => {
                     <input type="text" className="text-gray-900 text-sm rounded-lg block w-full p-2 mr-4" required></input>
                 </div>
             </div>
-            <div className="flex relative h-52 shadow-md drop-shadow-md flex-col lg:flex-row justify-around items-center border-2 p-6 mx-6 mb-32">
+            <div className="flex h-52 shadow-md drop-shadow-md flex-col lg:flex-row justify-around items-center border-2 p-6 mx-6 mb-32 around-position">
                 <div className="card absolute left-24 top-12 w-96 bg-base-100 shadow-md border rounded-none">
                     <h2 className='bg-orange-400 p-3 text-white text-22px text-center'>Business Partnership</h2>
                     <p className='p-6'>Content</p>
@@ -30,7 +30,7 @@ const Collaboration = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card absolute top-12 w-96 bg-base-100 shadow-md border rounded-none">
+                <div className="card absolute top-12 w-96 bg-base-100 shadow-md border rounded-none alignment-around2">
                     <h2 className='bg-orange-400 p-3 text-white text-22px text-center'>Problem Settler</h2>
                     <p className='p-6 text-#686464'>Content</p>
                     <div className="card-body h-56 relative">
@@ -40,7 +40,7 @@ const Collaboration = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card absolute right-24 top-12 w-96 bg-base-100 shadow-md border rounded-none">
+                <div className="card absolute right-24 top-12 w-96 bg-base-100 shadow-md border rounded-none alignment-around3">
                     <h2 className='bg-orange-400 p-3 text-white text-22px text-center'>Work With Us</h2>
                     <p className='p-6'>Content</p>
                     <div className="card-body h-56 relative">
@@ -51,7 +51,7 @@ const Collaboration = () => {
                     </div>
                 </div>
             </div>
-            <div className='text-center text-gray-700 mt-64 fonts_type'>
+            <div className='text-center text-gray-700 mt-64 fonts_type alignment-around4'>
                 <h3 className='uppercase text-[31px]'>get in touch with us</h3>
                 <h3 className='text-lg text-#393636 mt-1 mb-4'>Tagline.</h3>
                 <div className='mb-24'>

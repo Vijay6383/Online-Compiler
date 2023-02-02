@@ -92,16 +92,16 @@ const Home = () => {
                 </div>
             </div>
             <div className='p-6'>
-            <div className='absolute w-[1375px] shadow-xl drop-shadow-xl h-[230px] rectangle-box'></div>
+            <div className='absolute block lg:w-[1375px] shadow-xl drop-shadow-xl h-[230px] rectangle-box'></div>
                 <h2 className='text pl-20 pt-10'>Sponsors</h2>
                 <div className='flex flex-col lg:flex-row justify-around items-center content-center container2'>
-                    <div className="cursor-pointer card1"></div>
-                    <div className="cursor-pointer card1"></div>
-                    <div className="cursor-pointer card1"></div>
+                    <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
+                    <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
+                    <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
                 </div>
                 <div className='flex items-start flex-col lg:flex-row justify-center p-16 items-center content-center container3'>
-                    <div className="cursor-pointer card2"></div>
-                    <div className="cursor-pointer card2"></div>
+                    <div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
+                    <div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
                 </div>
             </div>
             <div className='border-2 p-6 mx-6 mb-6'>
