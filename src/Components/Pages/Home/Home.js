@@ -79,6 +79,7 @@ const Home = () => {
       <h2 className="text-3xl  font-semibold text-gray-700 uppercase">
           Crystal Events
         </h2>
+      
         <Slider {...settings}>
           <div className="p-6 m-2 border-2  text-gray-600 ">
             <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
@@ -164,6 +165,7 @@ const Home = () => {
         </Slider>
 
         <div className=" absolute flex justify-between transform -translate-y-1/2 left-4 right-4  top-[162px] ">
+        <div className=" absolute flex justify-between transform -translate-y-1/2 left-4 right-4  top-[126px] ">
         <a href={`#slide`} className="-ml-3">
           ❮
         </a>
