@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import hero from "../../../assets/Hero.png";
 import footerImg from "../../../assets/footer.png";
 import topImg from "../../../assets/top.png";
@@ -10,6 +10,68 @@ import Slider from "react-slick";
 import "./Home.css";
 
 const Home = () => {
+	const [index, setIndex] = useState(0);
+
+	const items = [
+		{
+			heading: 'Item 1',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 2',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 3',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 4',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 5',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 6',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 7',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 8',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 9',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 10',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 11',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+		{
+			heading: 'Item 12',
+			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
+		},
+	];
+
+
+	const handleNext = () => {
+		setIndex(index + 3);
+	};
+
+	const handlePrev = () => {
+		setIndex(index - 3);
+	};
+
 	var settings = {
 		// dots: true,
 		infinite: true,
@@ -290,98 +352,6 @@ const Home = () => {
 								</div>
 							</div>
 						</div>
-
-						{/* <div className="w-full border-2">
-            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
-            <div>
-            <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
-            Name
-            </h2>
-            <p className="font-semibold pt-2 lg:text-base text-sm">
-            description
-            </p>
-            </div>
-            <div className="avatar">
-            <div className="w-24 rounded-full">
-            <img src="https://placeimg.com/192/192/people" alt="" />
-            </div>
-              </div>
-              </div>
-              </div>
-              <div className="w-full border-2">
-              <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
-              <div>
-                <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
-                  Name
-                  </h2>
-                <p className="font-semibold pt-2 lg:text-base text-sm">
-                  description
-                </p>
-                </div>
-                <div className="avatar">
-                <div className="w-24 rounded-full">
-                  <img src="https://placeimg.com/192/192/people" alt="" />
-                  </div>
-                  </div>
-                  </div>
-                  </div>
-                  <div className="w-full border-2">
-                  <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
-                  <div>
-                  <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
-                  Name
-                  </h2>
-                  <p className="font-semibold pt-2 lg:text-base text-sm">
-                  description
-                  </p>
-                  </div>
-              <div className="avatar">
-              <div className="w-24 rounded-full">
-              <img src="https://placeimg.com/192/192/people" alt="" />
-                </div>
-              </div>
-            </div>
-<<<<<<< HEAD
-            <div className='p-6'>
-            <div className='absolute block lg:w-[1375px] shadow-xl drop-shadow-xl h-[230px] rectangle-box'></div>
-                <h2 className='text pl-20 pt-10'>Sponsors</h2>
-                <div className='flex flex-col lg:flex-row justify-around items-center content-center container2'>
-                    <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
-                    <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
-                    <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
-                </div>
-                <div className='flex items-start flex-col lg:flex-row justify-center p-16 items-center content-center container3'>
-                    <div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
-                    <div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
-                </div>
-            </div>
-            <div className='border-2 p-6 mx-6 mb-6'>
-                <h2 className='text-3xl font-semibold text-gray-700 uppercase'>Volunteer</h2>
-                <div className='flex flex-col lg:flex-row justify-around items-center gap-4 border-2 py-6 px-12 m-6'>
-                    <div>
-                        <div className="w-full border-2">
-                            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
-                        </div>
-                        <p className='text-sm text-gray-500 lg:px-8 py-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia </p>
-                    </div>
-                    <div>
-                        <div className="w-full border-2">
-                            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
-                        </div>
-                        <p className='text-sm text-gray-500 lg:px-8 py-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia </p>
-                    </div>
-                    <div>
-                        <div className="w-full border-2">
-                            <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
-                        </div>
-                        <p className='text-sm text-gray-500 lg:px-8 py-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia </p>
-                    </div>
-                </div>
-            </div>
-        </>
-    );
-=======
-          </div> */}
 					</Slider>
 					<div className=" absolute flex justify-between transform -translate-y-1/2 left-4 right-4  top-[162px] ">
 						<a href={`#slide`} className="-ml-3">
@@ -407,10 +377,11 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="border-2 p-6 mx-6 mb-6">
-					<h2 className="text-3xl font-semibold text-gray-700 uppercase">
-						Volunteer
-					</h2>
+					<h2 className="text-3xl font-semibold text-gray-700 uppercase">Volunteer</h2>
 					<div className="flex flex-col lg:flex-row justify-around items-center gap-4 border-2 py-6 px-12 m-6">
+						{index > 0 && (
+							<button className="mr-3 text-gray-700 hover:text-gray-900 focus:outline-none focus:shadow-outline" onClick={handlePrev}>&lt;</button>
+						)}
 						<div>
 							<div className="w-full border-2">
 								<div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
@@ -438,12 +409,14 @@ const Home = () => {
 								Architecto eius expedita eaque ut officia{" "}
 							</p>
 						</div>
+						{index + 3 < items.length && (
+							<button className="ml-3 text-gray-700 hover:text-gray-900 focus:outline-none focus:shadow-outline" onClick={handleNext}>&gt;</button>
+						)}
 					</div>
 				</div>
 			</div>
 		</>
 	);
->>>>>>> 347968d07271ae59c8657915a357bf46019daeab
 };
 
 export default Home;
