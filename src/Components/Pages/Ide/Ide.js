@@ -1,12 +1,10 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { BsFillCaretLeftFill } from "react-icons/bs";
 import { HiPlus } from "react-icons/hi";
 // import { FaRegWindowClose } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import IdeTab from '../IdeTab/IdeTab';
 import "./Ide.css";
-
-
 
 const Ide = () => {
 
@@ -39,7 +37,7 @@ const Ide = () => {
 
     return (
         <>
-            <div className='lg:px-24 pt-12 px-6' style={tabFull ? {display: "none"}: {display: "block"}}>
+            <div className='lg:px-24 pt-12 px-6'>
                 <div className='flex justify-start items-center text-gray-500 text-sm font-semibold underline'>
                     <BsFillCaretLeftFill></BsFillCaretLeftFill>
                     <Link to='/problems'>Back to Code Tikki</Link>
@@ -52,7 +50,7 @@ const Ide = () => {
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
-            <div className='border-2 mx-6 mb-6 text-gray-400 lg:px-32 lg:pt-10 px-4 pt-4' style={tabFull ? {height: "100%", width: "100%",paddingTop: "5px",paddingLeft: "0px", paddingRight: "50px"}: {display: "block"}}>
+            <div className='border-2 mx-6 mb-6 text-gray-400 lg:px-32 lg:pt-10 px-4 pt-4'>
                 <div className='flex justify-start gap-1 text-xs font-medium'>
                     <button className='flex text-gray-500 shadow-lg border-2 '
                         style={{width: "35px"}}
