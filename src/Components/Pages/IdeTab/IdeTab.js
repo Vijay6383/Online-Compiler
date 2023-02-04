@@ -18,18 +18,20 @@ import "./IdeTab.css";
 
 const IdeTab = (props) => {
 
-    const [code, setCode] = useState(`public class program{ 
+    const [code, setCode] = useState(`public class codeTikki{ 
         public static void main(String[] args){ 
             System.out.println(5+5+6); 
         }
     }`);
     const [userOutput, setUserOutput] = useState("");
     const [userLang, setUserLang] = useState("java");
+    const [codeLang, setCodeLang] = useState("java");
     const [userTheme, setUserTheme] = useState("chrome");
     const [userInput, setUserInput] = useState("");
     const [loading, setLoading] = useState(false);
     const [fullScreen, setFullScreen] = useState(false);
     const [isSettings, setIsSettings] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
 
     const fileRef = useRef();
 
@@ -48,21 +50,54 @@ const IdeTab = (props) => {
         data: data
     };
 
-    const handleRun = (e) => {
+    const checkLanguage = () => {
+        dpaste(code).then(result => { 
+            result[1] = result[1].toString();
+            if(result[1] === "python"){
+                setCodeLang("py");
+            }else if(result[1] === "json"){
+                setCodeLang("cs");
+            } else{
+                setCodeLang(result[1]);
+            }
+            setIsChecked(true);
+        });
+    }
+
+    const handleRun = async(e) => {
         setLoading(true);
         if (code === ``) {
             return
         }
 
-        
+        if(userLang !== codeLang){
+            alert("choose the correct code language");
+            setLoading(false);
+            setIsChecked(v => !v);
+            return
+        }
+
         Axios(config)
         .then((response)=>{
             response.data.output ? setUserOutput(response.data.output) : setUserOutput(response.data.error)
             setLoading(false);
+            setIsChecked(v => !v);
         }).catch((error)=>{
             console.log(error);
         });
+        
     }
+
+    async function dpaste(content) {
+        var response = await fetch("https://dpaste.com/api/v2/guess-syntax/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: "content=" + encodeURIComponent(content),
+        });
+        return response.json();
+    }
+      
+      
 
     const clearCode = (e) => {
         e.preventDefault();
@@ -81,18 +116,19 @@ const IdeTab = (props) => {
 
     const optionHandler = (e) => {
         setUserLang(e.target.value);
+
         if(userLang === "java" ){
             setCode(
-            `public class program{ 
+            `public class codeTikki{ 
                 public static void main(String[] args){ 
                     System.out.println(5+5+6); 
                 }
             }`
             );
         } else {
-            setCode(``);
+            setCode("");
         }
-        
+
     }
 
 
@@ -116,7 +152,8 @@ const IdeTab = (props) => {
 
 
   return (
-    <div style={props.show ? {display: "block"} : {display: "none"}}>
+    // style={props.show ? {display: "block"} : {display: "none"}} for div tabs
+    <div>
         <div className='border-2 my-2 p-1 flex justify-between items-center'>
                     
             <select name="" id="" onChange={optionHandler} className='shadow-md text-gray-500 select select-accent border-2'>
@@ -153,7 +190,6 @@ const IdeTab = (props) => {
                             <option>terminal</option>
                         </select>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -184,7 +220,12 @@ const IdeTab = (props) => {
                 <input type="file" name="myFile" accept=".txt,.java,.js,.py,.c,.CPP,.go," ref={fileRef} onChange={e => handleFileChange(e.target.files[0])}/>
             </div>
             <div className='flex justify-center gap-2'>
-                <button className='text-gray-500 border-2 px-5 py-1' onClick={handleRun}>Run</button>
+                <button className='text-gray-500 border-2 px-5 py-1' onClick={checkLanguage} >Apply</button>
+                {
+                    isChecked ?
+                    <button className='text-gray-500 border-2 px-5 py-1' onClick={handleRun}>Run</button>
+                    : <button className='text-gray-500 border-2 px-5 py-1' style={{opacity: "0.6", cursor: "not-allowed"}} disabled>Run</button>
+                }
                 <button className='bg-orange-400 text-white px-5 py-1'>Submit</button>
             </div>
         </div>

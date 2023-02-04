@@ -1,36 +1,38 @@
 import React,{useState} from 'react';
 import { BsFillCaretLeftFill } from "react-icons/bs";
 import { HiPlus } from "react-icons/hi";
-import { FaRegWindowClose } from "react-icons/fa";
+// import { FaRegWindowClose } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import IdeTab from '../IdeTab/IdeTab';
 import "./Ide.css";
 
+
+
 const Ide = () => {
 
-    var [tabCount, setTabCount] = useState(1);
-    const [tabArray, setTabArray] = useState([1]);
+    // var [tabCount, setTabCount] = useState(1);
+    // const [tabArray, setTabArray] = useState([1]);
     const [tabFull, setTabFull] = useState(false)
 
-    const [activeIndex, setActiveIndex] = useState(1);
-    const handeTabClick = (tabIndex) => setActiveIndex(tabIndex);
-    const checkActiveIndex = (tabIndex) => (tabIndex === activeIndex); 
+    // const [activeIndex, setActiveIndex] = useState(1);
+    // const handeTabClick = (tabIndex) => setActiveIndex(tabIndex);
+    // const checkActiveIndex = (tabIndex) => (tabIndex === activeIndex); 
 
-    const handleTabAddition = (e) => {
-        e.preventDefault();
-        tabCount = tabCount+1;
-        setTabCount(tabCount);
-        setTabArray(oldArr => [...oldArr, tabCount]);
-    }
+    // const handleTabAddition = (e) => {
+    //     e.preventDefault();
+    //     tabCount = tabCount+1;
+    //     setTabCount(tabCount);
+    //     setTabArray(oldArr => [...oldArr, tabCount]);
+    // }
 
-    const handleTabClose = (tabIndex) => {
-        if(tabArray.length === 1){
-            return;
-        }
+    // const handleTabClose = (tabIndex) => {
+    //     if(tabArray.length === 1){
+    //         return;
+    //     }
 
-        setTabArray((oldTabs) => oldTabs.filter(oldIndex => oldIndex !== tabIndex) );
-    }
-
+    //     setTabArray((oldTabs) => oldTabs.filter(oldIndex => oldIndex !== tabIndex) );
+    // }
+    
     const isFull =(full) => {
         setTabFull(full);
     }
@@ -52,8 +54,12 @@ const Ide = () => {
             </div>
             <div className='border-2 mx-6 mb-6 text-gray-400 lg:px-32 lg:pt-10 px-4 pt-4' style={tabFull ? {height: "100%", width: "100%",paddingTop: "5px",paddingLeft: "0px", paddingRight: "50px"}: {display: "block"}}>
                 <div className='flex justify-start gap-1 text-xs font-medium'>
-                    {/* <button className='text-gray-500 shadow-lg border-2 px-2 py-1'>IDE</button> */}
-                    {
+                    <button className='flex text-gray-500 shadow-lg border-2 '
+                        style={{width: "35px"}}
+                        >
+                        <span>IDE</span>
+                    </button>
+                    {/* {
                         tabArray.map((tab) => (
                             <button className='flex justify-between text-gray-500 shadow-lg border-2 '
                              style={checkActiveIndex(tab) ? {backgroundColor: "#ccdcff", width: "54px"}: {width: "54px"} }
@@ -64,17 +70,18 @@ const Ide = () => {
                                 <FaRegWindowClose onClick={() => handleTabClose(tab)} height="1.2em" width="1.2em" />
                             </button>)
                         )
-                    }
-                    <button onClick={handleTabAddition} className='text-gray-500 shadow-lg border-2 px-2 py-1'>
+                    } */}
+                    <button className='text-gray-500 shadow-lg border-2 px-2 py-1'>
                         <HiPlus></HiPlus>
                     </button>
                 </div>
+                <IdeTab fullScreen={isFull} />
                 
-                {
+                {/* {
                     tabArray.map((tab) => (
                         <IdeTab show={checkActiveIndex(tab)} fullScreen={isFull} key={tab}/>)
                     )
-                }
+                } */}
                 
                 
                 <div className='w-full border-2'>
