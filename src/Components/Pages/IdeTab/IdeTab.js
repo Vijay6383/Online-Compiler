@@ -153,8 +153,8 @@ const IdeTab = (props) => {
 
   return (
     // style={props.show ? {display: "block"} : {display: "none"}} for div tabs
-    <div>
-        <div className='border-2 my-2 p-1 flex justify-between items-center'>
+    <div className='tab-box'>
+        <div  className='border-2 my-2 p-1 flex justify-between items-center'>
                     
             <select name="" id="" onChange={optionHandler} className='shadow-md text-gray-500 select select-accent border-2'>
                 <option value="java" >java</option>
