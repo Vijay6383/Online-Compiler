@@ -112,7 +112,7 @@ const Login = () => {
 							<span className="pl-2 text-sm text-gray-500">Remember me?</span>
 						</div>
 						<Link
-							to="/ForgetPassword"
+							to="/forgetpassword"
 							className="pl-2 text-sm text-gray-500 mt-3 underline">
 							Forgot Password?
 						</Link>
@@ -142,7 +142,7 @@ const Login = () => {
 					Don't have an account?
 					<Link
 						to="/Signup"
-						className="underline hover:cursor-pointer button_t pl-8">
+						className="underline hover:cursor-pointer button_t pl-2">
 						Signup
 					</Link>
 				</p>

@@ -364,25 +364,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
-            <div className="  border-2">
-              <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
-                <div>
-                  <h2 className="font-bold border-b-2 pb-2 uppercase text-xl lg:w-24">
-                    Name
-                  </h2>
-                  <p className="font-semibold pt-2 lg:text-base text-sm">
-                    description
-                  </p>
-                </div>
-                <div className="avatar">
-                  <div className="w-24 rounded-full">
-                    <img src="https://placeimg.com/192/192/people" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div className="  border-2">
               <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between">
                 <div>
@@ -410,69 +391,68 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className="border-2 p-6 mx-6 mb-6">
-          <h2 className="text-3xl font-semibold text-gray-700 uppercase">
-            Sponsors
-          </h2>
-          <div className="flex flex-col lg:flex-row justify-around items-center gap-12 p-6 m-6">
-            <div className="w-full border-2 py-12"></div>
-            <div className="w-full border-2 py-12"></div>
-            <div className="w-full border-2 py-12"></div>
-          </div>
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-12 p-6 m-6">
-            <div className="w-full lg:w-96 border-2 py-12"></div>
-            <div className="w-full lg:w-96 border-2 py-12"></div>
-          </div>
+      </div>
+      <div className="p-6">
+        <div className="absolute block lg:w-[1375px] shadow-xl drop-shadow-xl h-[230px] rectangle-box"></div>
+        <h2 className="text pl-20 pt-10">Sponsors</h2>
+        <div className="flex flex-col lg:flex-row justify-around items-center content-center container2">
+          <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
+          <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
+          <div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
         </div>
-        <div className="border-2 p-6 mx-6 mb-6">
-          <h2 className="text-3xl font-semibold text-gray-700 uppercase">
-            Volunteer
-          </h2>
-          <div className="flex flex-col lg:flex-row justify-around items-center gap-4 border-2 py-6 px-12 m-6">
-            {index > 0 && (
-              <button
-                className="mr-3 text-gray-700 hover:text-gray-900 focus:outline-none focus:shadow-outline"
-                onClick={handlePrev}
-              >
-                &lt;
-              </button>
-            )}
-            <div>
-              <div className="w-full border-2">
-                <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
-              </div>
-              <p className="text-sm text-gray-500 lg:px-8 py-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Architecto eius expedita eaque ut officia{" "}
-              </p>
+        <div className="flex items-start flex-col lg:flex-row justify-center p-16 items-center content-center container3">
+          <div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
+          <div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
+        </div>
+      </div>
+      <div className="border-2 p-6 mx-6 mb-6">
+        <h2 className="text-3xl font-semibold text-gray-700 uppercase">
+          Volunteer
+        </h2>
+        <div className="flex flex-col lg:flex-row justify-around items-center gap-4 border-2 py-6 px-12 m-6">
+          {index > 0 && (
+            <button
+              className="mr-3 text-gray-700 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+              onClick={handlePrev}
+            >
+              &lt;
+            </button>
+          )}
+          <div>
+            <div className="w-full border-2">
+              <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
             </div>
-            <div>
-              <div className="w-full border-2">
-                <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
-              </div>
-              <p className="text-sm text-gray-500 lg:px-8 py-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Architecto eius expedita eaque ut officia{" "}
-              </p>
-            </div>
-            <div>
-              <div className="w-full border-2">
-                <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
-              </div>
-              <p className="text-sm text-gray-500 lg:px-8 py-4">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Architecto eius expedita eaque ut officia{" "}
-              </p>
-            </div>
-            {index + 3 < items.length && (
-              <button
-                className="ml-3 text-gray-700 hover:text-gray-900 focus:outline-none focus:shadow-outline"
-                onClick={handleNext}
-              >
-                &gt;
-              </button>
-            )}
+            <p className="text-sm text-gray-500 lg:px-8 py-4">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Architecto eius expedita eaque ut officia{" "}
+            </p>
           </div>
+          <div>
+            <div className="w-full border-2">
+              <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
+            </div>
+            <p className="text-sm text-gray-500 lg:px-8 py-4">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Architecto eius expedita eaque ut officia{" "}
+            </p>
+          </div>
+          <div>
+            <div className="w-full border-2">
+              <div className="px-6 pt-6 pb-32 text-gray-600 flex flex-col-reverse lg:flex-row lg:items-start lg:justify-between"></div>
+            </div>
+            <p className="text-sm text-gray-500 lg:px-8 py-4">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Architecto eius expedita eaque ut officia{" "}
+            </p>
+          </div>
+          {index + 3 < items.length && (
+            <button
+              className="ml-3 text-gray-700 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+              onClick={handleNext}
+            >
+              &gt;
+            </button>
+          )}
         </div>
       </div>
     </>
