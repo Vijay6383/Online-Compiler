@@ -1,26 +1,24 @@
-<<<<<<< HEAD
 /* .simran-box {
     overflow: hidden;
 } */
 
 .title-heading {
-    font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 624px) {
-    /* .around-position {
+  /* .around-position {
         position: relative;
     } */
-    .alignment-around2 {
-        margin-top: 67%;
-    }
-    .alignment-around3 {
-        margin-top: 133%;
-    }
-    .alignment-around4 {
-        margin-top: 163%;
-    }
-    
+  .alignment-around2 {
+    margin-top: 67%;
+  }
+  .alignment-around3 {
+    margin-top: 133%;
+  }
+  .alignment-around4 {
+    margin-top: 163%;
+  }
 }
 
 /* @media screen and (min-width: 624px) {
@@ -38,5 +36,3 @@
     }
     
 } */
-=======
->>>>>>> 347968d07271ae59c8657915a357bf46019daeab
