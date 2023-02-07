@@ -1,7 +1,7 @@
 import React from "react";
 import { BsFillCaretLeftFill } from "react-icons/bs";
 import { SlMagnifier } from "react-icons/sl";
-
+import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 import "./Problem.css";
 const Problem = () => {
@@ -11,28 +11,92 @@ const Problem = () => {
 			id: "P_01",
 			Name: "Problem 1",
 			Level: "Beginner",
-			Topic: ["Topic 1", "Topic 3"],
+			Topics: ["Topic 1", "Topic 3"],
 		},
 		{
 			id: "P_02",
 			Name: "Problem 2",
-			Level: "Advanced",
-			Topic: ["Topic 3"],
+			Level: "Beginner",
+			Topics: ["Topic 3"],
 		},
+
 		{
 			id: "P_03",
 			Name: "Problem 3",
+			Level: "Intermediate",
+			Topics: ["Topic 2"],
+		},
+
+		{
+			id: "P_04",
+			Name: "Problem 4",
 			Level: "Beginner",
-			Topic: ["Topic 2"],
+			Topics: ["Topic 4"],
+		},
+
+		{
+			id: "P_05",
+			Name: "Problem 5",
+			Level: "Advanced",
+			Topics: ["Topic 2"],
+		},
+		{
+			id: "P_06",
+			Name: "Problem 6",
+			Level: "Beginner",
+			Topics: ["Topic 3"],
+		},
+
+		{
+			id: "P_07",
+			Name: "Problem 7",
+			Level: "Masters",
+			Topics: ["Topic 3"],
+		},
+
+		{
+			id: "P_08",
+			Name: "Problem 8",
+			Level: "Masters",
+			Topics: ["Topic 1"],
+		},
+		{
+			id: "P_09",
+			Name: "Problem 9",
+			Level: "Advanced",
+			Topics: ["Topic 3"],
+		},
+		{
+			id: "P_10",
+			Name: "Problem 10",
+			Level: "Beginner",
+			Topics: ["Topic 1"],
+		},
+		{
+			id: "P_11",
+			Name: "Problem 11",
+			Level: "Beginner",
+			Topics: ["Topic 2"],
+		},
+		{
+			id: "P_12",
+			Name: "Problem 12",
+			Level: "Beginner",
+			Topics: ["Topic 3"],
+		},
+		{
+			id: "P_13",
+			Name: "Problem 13",
+			Level: "Beginner",
+			Topics: ["Topic 4"],
 		},
 	];
-	// Sample array For testing
 	const levels = ["Beginner", "Intermediate", "Advanced", "Masters"];
-	// Sample array For testing
 	const Topics = ["Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5"];
 	const [Filter, setFilter] = React.useState({
 		Level: "Beginner",
 		Topics: "",
+		Search: "",
 	});
 	const [ProblemSet, setProblemSet] = React.useState(
 		problems.filter((element) => {
@@ -47,27 +111,61 @@ const Problem = () => {
 
 	const onOptionChangeHandler = (event) => {
 		const { value, name } = event.target;
-		setFilter((prev) => {
-			return {
-				...prev,
-				[name]: value,
-			};
-		});
+		if (name === "Level") {
+			setFilter((prev) => {
+				return {
+					[name]: value,
+					Topics: "",
+					Search: "",
+				};
+			});
+		} else
+			setFilter((prev) => {
+				return {
+					...prev,
+					[name]: value,
+				};
+			});
 	};
 
 	const updateListDOM = () => {
-		if (Filter.Topics === "") {
-			setProblemSet(
-				problems.filter((element) => {
+		setProblemSet(
+			problems.filter((element) => {
+				{
 					return element.Level === Filter.Level;
-				})
-			);
-		} else {
+				}
+			})
+		);
+		if (Filter.Search) {
+			if (!Filter.Topics) {
+				setProblemSet(
+					ProblemSet.filter((element) => {
+						return (
+							element.id.toLowerCase().includes(Filter.Search.toLowerCase()) ||
+							element.Name.toLowerCase().includes(Filter.Search.toLowerCase())
+						);
+					})
+				);
+			} else {
+				setProblemSet(
+					problems.filter((element) => {
+						return (
+							(element.id.toLowerCase().includes(Filter.Search.toLowerCase()) ||
+								element.Name.toLowerCase().includes(
+									Filter.Search.toLowerCase()
+								)) &&
+							element.Topics.includes(Filter.Topics)
+						);
+					})
+				);
+			}
+		}
+		if (Filter.Topics) {
 			setProblemSet(
 				problems.filter((element) => {
 					return (
 						element.Level === Filter.Level &&
-						element.Topic.includes(Filter.Topics)
+						element.Topics.includes(Filter.Topics)
 					);
 				})
 			);
@@ -88,24 +186,26 @@ const Problem = () => {
 					<BsFillCaretLeftFill></BsFillCaretLeftFill>
 					<Link to="/">Back to Code Tikki</Link>
 				</div>
-				<h2 className="text-3xl font-semibold mb-3 text-gray-700">Problems</h2>
-				<div className="flex justify-start gap-2 mb-2 text-xs font-medium ">
-					<select
-						name=""
-						id=""
-						className="shadow-md text-gray-500 select select-accent border-2">
-						<option value="">Categories</option>
-						<option value="">Categories 1</option>
-						<option value="">Categories 2</option>
-					</select>
-					<select
-						name=""
-						id=""
-						className="shadow-md text-gray-500 select select-accent border-2">
-						<option value="">Latest</option>
-						<option value="">Latest 1</option>
-						<option value="">Latest 2</option>
-					</select>
+				<h2 className="problem_heading text-3xl font-semibold mb-3 text-gray-700">
+					Problems
+				</h2>
+				<div className="selection-container text-gray-600">
+					<div className="custom-select-box">
+						<select name="" id="" className="level_menu">
+							<option value="">Categories</option>
+							<option value="">Categories 1</option>
+							<option value="">Categories 2</option>
+						</select>
+						<IoIosArrowDropdownCircle className="select-arrow"></IoIosArrowDropdownCircle>
+					</div>
+					<div className="custom-select-box">
+						<select name="" id="" className="level_menu text-center">
+							<option value="">Latest</option>
+							<option value="">Latest 1</option>
+							<option value="">Latest 2</option>
+						</select>
+						<IoIosArrowDropdownCircle className="select-arrow"></IoIosArrowDropdownCircle>
+					</div>
 				</div>
 			</div>
 			<div
@@ -136,10 +236,17 @@ const Problem = () => {
                             <li><Link to=''>Topic 5</Link></li>
                         </ul>
                     </div> */}
-					<div className="border-r-2 m-1 px-4 pt-4 filterSection">
-						<div className="searchBox">
+					<div className="lg:border-r-2 m-1 px-4 pt-4 filterSection ">
+						<div className="searchBox lg:w-full lg:mx-0 sm:w-1/2 sm:mx-auto mb-4">
 							<SlMagnifier className="magnifyGlass"></SlMagnifier>
-							<input type="text" placeholder="SEARCH" className="search" />
+							<input
+								type="text"
+								placeholder="Search"
+								className="search"
+								value={Filter.Search}
+								onChange={onOptionChangeHandler}
+								name="Search"
+							/>
 						</div>
 						<ul className="filter_mode">
 							<div className="marker" style={markerLocation}></div>
@@ -158,14 +265,17 @@ const Problem = () => {
 							</li>
 						</ul>
 						<div className="level_selection">
-							<select
-								className="level_menu"
-								name="Level"
-								onChange={onOptionChangeHandler}>
-								{levels.map((levels, index) => {
-									return <option key={index}>{levels}</option>;
-								})}
-							</select>
+							<div className="custom-select-box">
+								<select
+									className="level_menu"
+									name="Level"
+									onChange={onOptionChangeHandler}>
+									{levels.map((levels, index) => {
+										return <option key={index}>{levels}</option>;
+									})}
+								</select>
+								<IoIosArrowDropdownCircle className="select-arrow"></IoIosArrowDropdownCircle>
+							</div>
 							<Link to="/" className="link">
 								About Levels
 							</Link>
@@ -191,8 +301,11 @@ const Problem = () => {
 							<p className="text-xl pr-2">Level : </p>
 							<p className="level_dom">{Filter.Level}</p>
 						</div>
-						<div className="">
-							<table className="table w-full">
+						{/* <div className="t_heads">
+							<table className="table w-full"></table>
+						</div> */}
+						<div className="scrollit">
+							<table className="table w-full ">
 								<thead>
 									<tr>
 										<th>Poblem Id</th>
@@ -200,28 +313,25 @@ const Problem = () => {
 										<th>Difficulty Level</th>
 									</tr>
 								</thead>
-							</table>
-							<div className="scrollit">
-								<table className="table w-full ">
-									<tbody>
-										{ProblemSet.map((prob, index) => {
-											return (
-												<tr key={index}>
-													<td>{prob.id}</td>
-													<td>{prob.Name}</td>
-													<td>{prob.Level}</td>
-												</tr>
-											);
-										})}
 
-										{/* <tr>
+								<tbody>
+									{ProblemSet.map((prob, index) => {
+										return (
+											<tr key={index} className="problems">
+												<td>{prob.id}</td>
+												<td>{prob.Name}</td>
+												<td>{prob.Level}</td>
+											</tr>
+										);
+									})}
+
+									{/* <tr>
 											<td>Completed</td>
 											<td>P_02</td>
 											<td>Problem2</td>
 										</tr> */}
-									</tbody>
-								</table>
-							</div>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
