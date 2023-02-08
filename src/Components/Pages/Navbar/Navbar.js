@@ -4,16 +4,31 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png'
 
 const Navbar = () => {
-
-    const menuItem = <>
-        <li><Link to='/'>HOME</Link></li>
-        <li><Link to='/problems'>PROBLEMS</Link></li>
-        <li><Link to='/ide'>IDE</Link></li>
-        <li><Link to='/competition'>COMPETITION</Link></li>
-        <li><Link to='/discussion'>DISCUSSION</Link></li>
-        <li><Link to='/profile'>USER PROFILE</Link></li>
-        <li><Link to='/collaboration'>COLLABORATION</Link></li>
+  const menuItem = (
+    <>
+      <li>
+        <Link to="/">HOME</Link>
+      </li>
+      <li>
+        <Link to="/problems">PROBLEMS</Link>
+      </li>
+      <li>
+        <Link to="/ide">IDE</Link>
+      </li>
+      <li>
+        <Link to="/competition">COMPETITION</Link>
+      </li>
+      <li>
+        <Link to="/discussion">DISCUSSION</Link>
+      </li>
+      <li>
+        <Link to="/profile">USER PROFILE</Link>
+      </li>
+      <li>
+        <Link to="/collaboration">COLLABORATION</Link>
+      </li>
     </>
+  );
 
     return (
             <div className="navbar shadow-md text-black text-sm">

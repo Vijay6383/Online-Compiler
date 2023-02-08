@@ -53,7 +53,7 @@
   .right-8 {
     right: 2rem;
   }
-}
+} 
 
 @media (max-width: 2560px) {
   .container {
@@ -154,25 +154,25 @@
     padding-right: 80px;
 }
 
-.container3{
-    border: 2rem;
-    opacity: 100%;
-    gap: 85px;
-    padding-top: 50px;
-    border-width: 2rem;
-    padding-left: 80px;
-    padding-right: 80px;
+.container3 {
+  border: 2rem;
+  opacity: 100%;
+  gap: 85px;
+  padding-top: 50px;
+  border-width: 2rem;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .text {
-    text-align: left;
-    letter-spacing: 0px;
-    color: #4B4949;
-    text-transform: uppercase;
-    opacity: 1;
-    font-weight: 600;
-    font-size: 28px;
-    font-family:'Times New Roman', Times, serif;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #4b4949;
+  text-transform: uppercase;
+  opacity: 1;
+  font-weight: 600;
+  font-size: 28px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 
@@ -187,9 +187,8 @@
 
   
 
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}

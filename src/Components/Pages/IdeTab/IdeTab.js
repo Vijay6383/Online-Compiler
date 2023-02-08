@@ -1,6 +1,6 @@
 import React,{useState, useRef} from 'react';
 import Axios from 'axios';
-import { FaCog, FaCompressArrowsAlt, FaFileDownload, FaSyncAlt } from "react-icons/fa";
+import {FaSyncAlt } from "react-icons/fa";
 import AceEditor from "react-ace";
 import 'ace-builds/src-noconflict/mode-javascript'
 import 'ace-builds/src-noconflict/mode-java'
@@ -14,6 +14,10 @@ import 'ace-builds/src-noconflict/theme-tomorrow'
 import 'ace-builds/src-noconflict/theme-eclipse'
 import 'ace-builds/src-noconflict/theme-terminal'
 import spinner from "../../../assets/Spinner.svg"
+import dropdown from "../../../assets/dropdown.avif"
+import downloadIcon from "../../../assets/downloadicon.png"
+import fullscreenIcon from "../../../assets/fullscreenicon.png"
+import settings from "../../../assets/settings.png"
 import "./IdeTab.css";
 
 const IdeTab = (props) => {
@@ -32,6 +36,7 @@ const IdeTab = (props) => {
     const [fullScreen, setFullScreen] = useState(false);
     const [isSettings, setIsSettings] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+    const [isError, setIsError] = useState(false); 
 
     const fileRef = useRef();
 
@@ -80,6 +85,7 @@ const IdeTab = (props) => {
         Axios(config)
         .then((response)=>{
             response.data.output ? setUserOutput(response.data.output) : setUserOutput(response.data.error)
+            response.data.output ? setIsError(false) : setIsError(true)
             setLoading(false);
             setIsChecked(v => !v);
         }).catch((error)=>{
@@ -155,30 +161,33 @@ const IdeTab = (props) => {
     // style={props.show ? {display: "block"} : {display: "none"}} for div tabs
     <div className='tab-box'>
         <div  className='border-2 my-2 p-1 flex justify-between items-center'>
-                    
-            <select name="" id="" onChange={optionHandler} className='shadow-md text-gray-500 select select-accent border-2'>
-                <option value="java" >java</option>
-                <option value="js" >js</option>
-                <option value="py">py</option>
-                <option value="c" >c</option>
-                <option value="cpp">cpp</option>
-                <option value="cs" >cs</option>
-            </select>
+            <div className='category-box'>
+                <img className='category-icon' src={dropdown} alt='menu-circle' style={{height: "20px", width: "20px"}}/>
+                <select name="" id="" onChange={optionHandler} className='shadow-md text-gray-500 select select-accent border-2' style={{position: "relative"}}>
+                    <option value="java" >java</option>
+                    <option value="js" >js</option>
+                    <option value="py">py</option>
+                    <option value="c" >c</option>
+                    <option value="cpp">cpp</option>
+                    <option value="cs" >cs</option>
+                </select>
+            </div>
+            
             <div id='ide-options-top' className='text-gray-500 flex gap-1'>
-                <button className='border-2 ' onClick={handleDownload}>
-                    <FaFileDownload ></FaFileDownload>
-                </button>
-                <button onClick={handleFullScreen} className='border-2 '>
-                    <FaCompressArrowsAlt ></FaCompressArrowsAlt>
-                </button>
-                <button onClick={handleSettings} className='border-2 '>
-                    <FaCog ></FaCog>
-                </button>
+                <div className='flex justify-even'>
+                    <button className='border-2 ' onClick={handleDownload} style={{marginRight: "10px"}}>
+                        <img src={downloadIcon} alt='' style={{height: "30px", width: "30px"}}/>
+                    </button>
+                    <button onClick={handleFullScreen} className='border-2 ' style={{marginRight: "10px"}}>
+                        <img src={fullscreenIcon} alt='' style={{height: "28px", width: "28px"}}/>
+                    </button>
+                    <button onClick={handleSettings} className='border-2 ' style={{marginRight: "10px"}}>
+                        <img src={settings} alt='' style={{height: "30px", width: "30px"}}/>
+                    </button>
+                </div>
+                
                 <div className='right-floating-bar shadow-lg' style={isSettings ? {display: "block"} : {display: "none"}}>
                     <div id='triangle'></div>
-                    {/* <div id='snippet-option' className='flex justify-even pl-4'>
-                        <input type="checkbox" name='snippet' style={{width: '20px'}} checked={isSnippet} onChange={handleSnippet}/> <h4 className='text-black pl-2'>Disable snippet</h4>
-                    </div> */}
 
                     <div id="" className='theme-option pl-4 pt-2'>
                         <h4 className='text-black pb-1'>Choose theme</h4>
@@ -215,18 +224,18 @@ const IdeTab = (props) => {
             </button>
         </div>
         <div className='flex justify-between items-center my-2 text-xs font-medium'>
-            <button className='text-gray-500 border-2 px-2 py-1' onClick={() => fileRef.current.click()}>Open File</button>
+            <button className='text-gray-500 border-2 px-2 py-1' style={{fontSize: "16px"}} onClick={() => fileRef.current.click()}>Open File</button>
             <div style={{ display: "none"}}>
                 <input type="file" name="myFile" accept=".txt,.java,.js,.py,.c,.CPP,.go," ref={fileRef} onChange={e => handleFileChange(e.target.files[0])}/>
             </div>
             <div className='flex justify-center gap-2'>
-                <button className='text-gray-500 border-2 px-5 py-1' onClick={checkLanguage} >Apply</button>
+                <button className='bg-orange-400 text-white px-5 py-1' style={{fontSize: "16px"}} onClick={checkLanguage} title="Apply before running code" >Apply</button>
                 {
                     isChecked ?
-                    <button className='text-gray-500 border-2 px-5 py-1' onClick={handleRun}>Run</button>
-                    : <button className='text-gray-500 border-2 px-5 py-1' style={{opacity: "0.6", cursor: "not-allowed"}} disabled>Run</button>
+                    <button className='bg-orange-400 text-white px-5 py-1' style={{fontSize: "16px"}} onClick={handleRun} title="click to run code">Run</button>
+                    : <button className='text-gray-500 border-2 px-5 py-1' style={{opacity: "0.6", cursor: "not-allowed", fontSize: "16px"}} disabled>Run</button>
                 }
-                <button className='bg-orange-400 text-white px-5 py-1'>Submit</button>
+                <button className='bg-orange-400 text-white px-5 py-1' style={{fontSize: "16px"}}>Submit</button>
             </div>
         </div>
         <p className='text-gray-500'>Custom Input</p>
@@ -239,13 +248,22 @@ const IdeTab = (props) => {
                 <img style={{width: "40px", height: "40px"}} src={spinner} alt='Loading...' />
             </div> :
             <div className='output-box'>
-                <p className='text-gray-500'>Output</p>
+                <p className='text-gray-500 flex'>Output {userOutput && (isError ? <p className='error-m'> compilation error X </p> : <p className='success-m'> compilation successfull ✓ </p>)}</p>
                 <div className='w-full border-2 mb-2'>
                     <p className='bg-gray-200 p-2'></p>
                     <p className='text-black p-2 mb-20'> {userOutput} </p>
                 </div>
             </div>
         }
+        <div className='w-full border-2'>
+            {
+                userInput ?
+                <p className='mb-12 p-2'>Note: the code will run with custom input</p> :
+                <p className='mb-12 p-2'>Note: the code will run without custom input</p>
+            }
+            
+            
+        </div>
     </div>
   )
 }

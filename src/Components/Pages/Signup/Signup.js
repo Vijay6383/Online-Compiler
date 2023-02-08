@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 import "./Signup.css";
 const Signup = () => {
+	const isEmail = (email) =>
+		/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 	const getAccounts = () => {
 		const data = localStorage.getItem("Accounts");
 		if (data) {
@@ -49,6 +51,9 @@ const Signup = () => {
 			)
 		) {
 			GenerateAlert("Account already exist!", "red");
+			return;
+		} else if (!isEmail(newAcc.Email)) {
+			GenerateAlert("Invalid Email Format !", "red");
 			return;
 		} else if (newAcc.Password.length < 8) {
 			GenerateAlert("Password Must be greater than 8 digits", "red");
@@ -168,7 +173,7 @@ const Signup = () => {
 					Already have an account?
 					<Link
 						to="/login"
-						className="underline hover:cursor-pointer button_t pl-8">
+						className="underline hover:cursor-pointer button_t pl-2">
 						Login
 					</Link>
 				</p>

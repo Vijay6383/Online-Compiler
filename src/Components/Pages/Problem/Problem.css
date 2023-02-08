@@ -8,8 +8,13 @@ table {
 	box-shadow: 0px 3px 6px #00000029;
 	color: white;
 }
+.problem_heading {
+	font-family: "Pretzel";
+	text-transform: uppercase;
+}
 .table td {
-	background: #ffffff 0% 0% no-repeat padding-box;
+	/* background: #ffffff 0% 0% no-repeat padding-box; */
+	background-color: transparent;
 	box-shadow: 0px 3px 6px #00000029;
 	border: 0;
 }
@@ -24,24 +29,48 @@ table {
 	flex-direction: column;
 	overflow: hidden;
 }
+.t_heads {
+	overflow-x: scroll;
+	scrollbar-width: none;
+}
+.t_heads::-webkit-scrollbar {
+	display: none;
+}
 .scrollit {
 	overflow-y: scroll;
 	height: 70vh;
 }
+.selection-container {
+	display: flex;
+	gap: 2rem;
+}
+.selection-container > .custom-select-box {
+	width: 125px;
+}
 .searchBox {
 	display: flex;
-	justify-content: space-evenly;
+	/* justify-content: space-evenly; */
 	align-items: center;
 	border-radius: 15px;
 	padding: 0.5rem;
-	color: #707070;
 	background: #ffffff 0% 0% no-repeat padding-box;
 	box-shadow: inset 0px 3px 6px #00000029, 0px 3px 6px #00000029;
 	border-radius: 38px;
+	padding-left: 1rem;
+	color: #707070;
+}
+.search::placeholder {
+	color: #707070;
+}
+.searchBox > .magnifyGlass {
+	height: 20px;
+	width: 20px;
 }
 .search {
 	margin-left: 8px;
 	outline: none;
+	width: 100%;
+	font-size: 1rem;
 }
 .filter_selection {
 	width: 511px;
@@ -60,12 +89,27 @@ table {
 	border-radius: 8px;
 	background-color: black;
 }
+.custom-select-box {
+	position: relative;
+	margin: 10px 0;
+	cursor: pointer;
+	box-shadow: 0px 3px 6px #00000029;
+	border-radius: 8px;
+	overflow: hidden;
+}
 .level_menu {
-	padding: 1rem;
+	appearance: none;
+	padding: 0.6rem;
+	width: 100%;
 	background: #ffffff 0% 0% no-repeat padding-box;
 	box-shadow: 0px 3px 6px #00000029;
-	width: 100%;
-	margin-bottom: 10px;
+	cursor: pointer;
+}
+.select-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 1rem;
 }
 .level_selection .link {
 	font-size: 12px;
@@ -86,21 +130,34 @@ table {
 	font-weight: 600;
 }
 
-label {
+.topicbox {
 	font-size: 13px;
 	padding: 0.5rem;
 	border-radius: 20px;
 }
-label:hover {
+.topicbox:hover {
 	cursor: pointer;
 	background-color: #f26f07;
 	color: white;
 }
-label > input[type="radio"] {
+.topicbox > input {
 	display: none;
 }
 
 .active {
 	background-color: #f26f07;
 	color: white;
+}
+.problems:hover {
+	cursor: pointer;
+	background-color: #ffb77e;
+}
+.topicbox > input:checked ~ .topicbox {
+	background-color: aqua;
+}
+@media (max-width: 640px) {
+	.searchBox {
+		width: 80%;
+		margin: 0 auto;
+	}
 }
