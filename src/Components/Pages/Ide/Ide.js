@@ -42,9 +42,9 @@ const Ide = () => {
                     <BsFillCaretLeftFill></BsFillCaretLeftFill>
                     <Link to='/problems'>Back to Code Tikki</Link>
                 </div>
-                <h2 className='text-3xl font-semibold text-gray-700'>IDE</h2>
-                <h3 className='lg:text-3xl my-2 text-gray-700 uppercase'>What is an IDE?</h3>
-                <div className='text-gray-700 lg:text-xl lg:mb-12 mb-6'>
+                <h2 className='text-3xl font-semibold text-gray-700' style={{fontFamily: "Pretzel"}}>IDE</h2>
+                <h3 className='lg:text-3xl my-2 text-gray-700 uppercase' style={{fontSize: "31px"}}>What is an IDE?</h3>
+                <div className='text-gray-700 lg:text-xl lg:mb-12 mb-6' style={{fontSize: "20px"}}>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet.</p>
@@ -81,10 +81,6 @@ const Ide = () => {
                     )
                 } */}
                 
-                
-                <div className='w-full border-2'>
-                    <p className='mb-12 p-2'>Note</p>
-                </div>
             </div>
         </>
     );
