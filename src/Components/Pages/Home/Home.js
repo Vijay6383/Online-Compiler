@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import hero from "../../../assets/Hero.png";
 import footerImg from "../../../assets/footer.png";
 import topImg from "../../../assets/top.png";
@@ -91,8 +91,8 @@ const Home = () => {
 
 								<div className="content-box max-w-[90%]  m-4 p-6 border-2 text-gray-600 h-fit" key={index}>
 									<h2 className="font-bold border-b-2 pb-2 uppercase text-xl leading-none  w-24 text-style">
-										<div>Event</div> 
-										<div>Name</div>  
+										<div>Event</div>
+										<div>Name</div>
 									</h2>
 									<p className="font-semibold lg:text-base text-sm w-[200px] h-[100px] ">description</p>
 									<p className="text-xs border-b-2 pt-2 font-semibold uppercase w-24 text-style">
@@ -137,6 +137,7 @@ const Home = () => {
 						</Slider>
 					</div>
 					<div className='flex items-start flex-col lg:flex-row justify-center p-16 content-center container3'>
+					</div>
 				</div>
 			</div>
 
@@ -196,6 +197,8 @@ const Home = () => {
 						{index + 3 && (
 							<button className="ml-3 text-gray-700 hover:text-gray-900 focus:outline-none focus:shadow-outline" onClick={handleNext}>&gt;</button>
 						)}
+					</div>
+				</div>
 			</div>
 
 
