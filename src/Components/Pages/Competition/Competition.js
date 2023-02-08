@@ -174,12 +174,12 @@ const Competition = () => {
                     </div>
                     <h2 className='text-3xl font-semibold mb-3 text-gray-700 uppercase competition  '>Competition</h2>
                     <div className='flex lg:justify-center gap-2 mb-2 text-xs font-medium selections'>
-                        <select name="" id="" className='shadow-md text-gray-500 select select-accent border-2 select'>
+                        <select name="" id="" className='shadow-md text-gray-500 select select-accent border-2'>
                             <option value="" >Categories </option>
                             <option value="" >Categories 1</option>
                             <option value="" >Categories 2</option>
                         </select>
-                        <select name="" id="" className='shadow-md text-gray-500 select select-accent border-2 select'>
+                        <select name="" id="" className='shadow-md text-gray-500 select select-accent border-2'>
                             <option value="" >Latest </option>
                             <option value="" >Latest 1</option>
                             <option value="" >Latest 2</option>

@@ -43,7 +43,7 @@ const Footer = () => {
                 <div className="divider lg:divider-horizontal border-l-4"></div>
                 <div className='flex items-center justify-center'>
                     <HiOutlineMail></HiOutlineMail>
-                    <a href=""><p className='pl-2'>kunal.q.sharma@quencil.in</p></a>
+                    <a href="mailto:kunal.q.sharma@quencil.in"><p className='pl-2'>kunal.q.sharma@quencil.in</p></a>
                 </div>
             </div>
         </footer>

@@ -12,58 +12,6 @@ import "./Home.css";
 const Home = () => {
 	const [index, setIndex] = useState(0);
 
-	const items = [
-		{
-			heading: 'Item 1',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 2',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 3',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 4',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 5',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 6',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 7',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 8',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 9',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 10',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 11',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-		{
-			heading: 'Item 12',
-			description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto eius expedita eaque ut officia.'
-		},
-	];
-
-
 	const handleNext = () => {
 		setIndex(index + 3);
 	};
@@ -370,7 +318,7 @@ const Home = () => {
 						<div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
 						<div className="cursor-pointer transition duration-500 hover:scale-110 card1"></div>
 					</div>
-					<div className='flex items-start flex-col lg:flex-row justify-center p-16 items-center content-center container3'>
+					<div className='flex items-start flex-col lg:flex-row justify-center p-16 content-center container3'>
 						<div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
 						<div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
 					</div>
@@ -408,7 +356,7 @@ const Home = () => {
 								Architecto eius expedita eaque ut officia{" "}
 							</p>
 						</div>
-						{index + 3 < items.length && (
+						{index + 3 && (
 							<button className="ml-3 text-gray-700 hover:text-gray-900 focus:outline-none focus:shadow-outline" onClick={handleNext}>&gt;</button>
 						)}
 					</div>
