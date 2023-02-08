@@ -133,19 +133,19 @@ const Home = () => {
 
 			{/* Sponsors */}
 
-			<div className="conatiner h-[600px] max-[769px]:h-[350px] mb-5 ">
+			<div className="conatiner h-[600px] max-[769px]:h-[1100px] mb-5 ">
 				<div className='border-2 px-2 py-3 mx-3 mb-6 h-[200px] rectangle-box-shadow'>
 					<h2 className="text-3xl font-semibold text-gray-700 
 					uppercase mt-[25px] ml-[50px] text-style">
 						Sponsors
 					</h2>
-					<div className='flex flex-col lg:flex-row justify-around items-center content-center
-					 container2 max-[426px]:!p-[20px]'>
-						<div className="cursor-pointer transition duration-500 hover:scale-110 card1 max-[426px]:!w-[90%] "></div>
-						<div className="cursor-pointer transition duration-500 max-[769px]:hidden hover:scale-110 card1"></div>
-						<div className="cursor-pointer transition duration-500 max-[769px]:hidden hover:scale-110 card1"></div>
+					<div className='flex flex-col lg:flex-row  justify-around items-center content-center
+					 container2 '>
+						<div className="cursor-pointer transition duration-500 hover:scale-110 card1  "></div>
+						<div className="cursor-pointer transition duration-500  hover:scale-110 card1"></div>
+						<div className="cursor-pointer transition duration-500  hover:scale-110 card1"></div>
 					</div>
-					<div className='flex items-center flex-col lg:flex-row justify-center p-16 max-[769px]:hidden content-center container3'>
+					<div className='flex items-center flex-col lg:flex-row justify-center p-16 content-center container3'>
 						<div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
 						<div className="cursor-pointer transition duration-500 hover:scale-110 card2"></div>
 					</div>
