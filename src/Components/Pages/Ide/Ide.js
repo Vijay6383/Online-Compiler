@@ -43,12 +43,12 @@ const Ide = () => {
                     <Link to='/problems'>Back to Code Tikki</Link>
                 </div>
                 <h2 className='text-3xl font-semibold text-gray-700' style={{fontFamily: "Pretzel"}}>IDE</h2>
-                <h3 className='lg:text-3xl my-2 text-gray-700 uppercase' style={{fontSize: "31px"}}>What is an IDE?</h3>
+                {/* <h3 className='lg:text-3xl my-2 text-gray-700 uppercase' style={{fontSize: "31px"}}>What is an IDE?</h3>
                 <div className='text-gray-700 lg:text-xl lg:mb-12 mb-6' style={{fontSize: "20px"}}>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet.</p>
                     <p>Lorem ipsum dolor sit amet.</p>
-                </div>
+                </div> */}
             </div>
             <div className='border-2 mx-6 mb-6 text-gray-400 lg:px-32 lg:pt-10 px-4 pt-4' style={tabFull ? {paddingRight: "0px", paddingLeft: "0px", paddingTop: "0px"} : {display: "block"}}>
                 <div className='flex justify-start gap-1 text-xs font-medium'>
