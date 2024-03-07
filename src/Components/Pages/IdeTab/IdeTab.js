@@ -55,6 +55,15 @@ const IdeTab = (props) => {
         data: data
     };
 
+    async function dpaste(content) {
+        var response = await fetch("https://dpaste.com/api/v2/guess-syntax/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: "content=" + encodeURIComponent(content),
+        });
+        return response.json();
+    }
+
     const checkLanguage = () => {
         dpaste(code).then(result => { 
             result[1] = result[1].toString();
@@ -94,14 +103,7 @@ const IdeTab = (props) => {
         
     }
 
-    async function dpaste(content) {
-        var response = await fetch("https://dpaste.com/api/v2/guess-syntax/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: "content=" + encodeURIComponent(content),
-        });
-        return response.json();
-    }
+    
       
       
 
@@ -131,8 +133,6 @@ const IdeTab = (props) => {
                 }
             }`
             );
-        } else {
-            setCode("");
         }
 
     }

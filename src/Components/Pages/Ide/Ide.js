@@ -1,8 +1,6 @@
 import React,{useState} from 'react';
-import { BsFillCaretLeftFill } from "react-icons/bs";
 import { HiPlus } from "react-icons/hi";
 // import { FaRegWindowClose } from "react-icons/fa";
-import { Link } from 'react-router-dom';
 import IdeTab from '../IdeTab/IdeTab';
 import "./Ide.css";
 
@@ -34,13 +32,12 @@ const Ide = () => {
     const isFull =(full) => {
         setTabFull(full);
     }
-
+  
     return (
         <>
             <div className='lg:px-24 pt-12 px-6' style={tabFull ? {display: "none"} : {display: "block"}}>
                 <div className='flex justify-start items-center text-gray-500 text-sm font-semibold underline'>
-                    <BsFillCaretLeftFill></BsFillCaretLeftFill>
-                    <Link to='/problems'>Back to Code Tikki</Link>
+
                 </div>
                 <h2 className='text-3xl font-semibold text-gray-700' style={{fontFamily: "Pretzel"}}>IDE</h2>
                 {/* <h3 className='lg:text-3xl my-2 text-gray-700 uppercase' style={{fontSize: "31px"}}>What is an IDE?</h3>
